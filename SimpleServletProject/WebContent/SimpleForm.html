@@ -5,7 +5,44 @@
 </head>
 <body>
 	<form action="xmlServletPath" method="POST">
-		<input name="username">
+		<label id="username">User Name
+		<input for="username" name="username">
+		<br>
+		
+		<label id="firstname">First Name</label>
+		<input for="firstname" name="firstname">
+		<br>
+		
+		<label id="lastname">Last Name</label>
+		<input for="lastname" name="lastname">
+		<br>
+		
+		<input for="designation" type="radio" name="designation" value="Developer">
+			Developer
+		</input>
+		<input for="designation" type="radio" name="designation" value="Tester">
+			Tester
+		</input>
+		<input for="designation" type="radio" name="designation" value="Architect">
+			Architect
+		</input>
+		<select name="currentCity">
+			<option value="NYC">New York</option>
+			<option value="RDU">Raleigh</option>
+			<option value="SAN">San Diego</option>
+			<option value="SEA">Seattle</option>
+		</select>
+		
+		<select name="citiesStayed" multiple size="3">
+			<option value="NYC">New York</option>
+			<option value="RDU">Raleigh</option>
+			<option value="SAN">San Diego</option>
+			<option value="SEA">Seattle</option>
+		</select>
+		
+		
+		<br>
+		
 		<input type="submit">
 	</form>
 </body>

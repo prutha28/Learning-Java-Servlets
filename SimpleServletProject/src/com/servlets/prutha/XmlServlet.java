@@ -24,7 +24,26 @@ public class XmlServlet extends HttpServlet {
 	@Override
 	protected void doPost( HttpServletRequest request, HttpServletResponse response) throws IOException{
 		String username = request.getParameter("username");
+		String firstname = request.getParameter("firstname");
+		String lastname = request.getParameter("lastname");
+		String designation = request.getParameter("designation");
+		String currentCity = request.getParameter("currentCity");
+		String[] citiesStayed = request.getParameterValues("citiesStayed");
+		
 		response.getWriter().append("Hello ").append(username);
+		response.getWriter().append("Here are the other details: \n");
+		response.getWriter().append("\n ").append(firstname);
+		response.getWriter().append("\n ").append(lastname);
+		response.getWriter().append("\n ").append(designation);
+		response.getWriter().append("\n ");
+		response.getWriter().append("Current City:").append(currentCity);
+		response.getWriter().append("\n ");
+		response.getWriter().append("Cities where you stayed:").append("\n");
+		
+		for( String city : citiesStayed){
+			response.getWriter().append(city + ", ");
+		}
+
 	}
 
 }

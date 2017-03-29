@@ -16,8 +16,14 @@ public class XmlServlet extends HttpServlet {
 	protected void doGet( HttpServletRequest request, 
 			HttpServletResponse response) throws IOException{
 		
+		response.setContentType("text/html");
 		String username = request.getParameter("username");
 		response.getWriter().append("Hello ").append(username);
+	}
+	
+	@Override
+	protected void doPost( HttpServletRequest request, HttpServletResponse response){
+		
 	}
 
 }

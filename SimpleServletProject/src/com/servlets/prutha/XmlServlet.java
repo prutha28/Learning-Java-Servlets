@@ -22,8 +22,9 @@ public class XmlServlet extends HttpServlet {
 	}
 	
 	@Override
-	protected void doPost( HttpServletRequest request, HttpServletResponse response){
-		
+	protected void doPost( HttpServletRequest request, HttpServletResponse response) throws IOException{
+		String username = request.getParameter("username");
+		response.getWriter().append("Hello ").append(username);
 	}
 
 }

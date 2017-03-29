@@ -1,5 +1,7 @@
 package com.servlets.prutha;
 
+import java.io.IOException;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,8 +14,10 @@ public class XmlServlet extends HttpServlet {
 
 	@Override
 	protected void doGet( HttpServletRequest request, 
-			HttpServletResponse response){
+			HttpServletResponse response) throws IOException{
 		
+		String username = request.getParameter("username");
+		response.getWriter().append("Hello ").append(username);
 	}
 
 }

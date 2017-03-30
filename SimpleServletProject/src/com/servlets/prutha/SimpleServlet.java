@@ -1,6 +1,9 @@
 package com.servlets.prutha;
 
 import java.io.IOException;
+import java.util.Date;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,6 +46,14 @@ public class SimpleServlet extends HttpServlet {
 		session.setAttribute("username", username);
 		response.getWriter().append("Hello ").append(username);
 		//		response.getWriter().append("\n").append(request.toString());
+		
+		
+		// Using Http Context object.
+		
+		ServletContext context = request.getServletContext();
+		context.setAttribute("postingDate", new Date());
+		
+		
 	}
 
 	/**

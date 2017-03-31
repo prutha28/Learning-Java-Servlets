@@ -37,7 +37,7 @@ public class SimpleServlet extends HttpServlet {
 
 		// Using Http Context object.
 		// Anything set in the HTTP Context is globally available across all 
-		// servlets in teh application for all the users in any browser session/ machine
+		// servlets in the application for all the users in any browser session/ machine
 		
 		ServletContext context = request.getServletContext();
 		context.setAttribute("postingDate", "30-March-2017");
